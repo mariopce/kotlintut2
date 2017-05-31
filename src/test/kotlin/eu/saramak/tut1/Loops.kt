@@ -38,5 +38,18 @@ class LoopsTest {
         assert(s =="Warsaw,Berlin,Amsterdam,")
     }
 
+    @Test
+    fun `Brake a loop`(){
+        var x = 0
+        loop@ while (x<10){
+            x++
+            if (x==5)
+                break@loop
+        }
+        assert(x==5)
+    }
+
+
+
 
 }
