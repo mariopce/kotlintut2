@@ -58,6 +58,16 @@ class FunctionsTest {
         assert(printStrings("a", "b")=="ab")
     }
 
+    @Test
+    fun `Should pass function to function`(){
+
+         doIt(1,2, ::sum)
+
+    }
+
+
+
+
     fun printStrings(vararg strings: String) : String {
         var connected = ""
         for (string in strings){
