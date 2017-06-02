@@ -21,11 +21,11 @@ class LoopsTest {
             s += a
         }
         //error
-//        for (a: Int in 30 .. 20 step -5) {
-//            s += a
-//        }
+        for (a: Int in 50 downTo 40 step 5) {
+            s += a
+        }
         print(s)
-        assert(s == "9910010099202530")
+        assert(s == "9910010099202530504540")
     }
     @Test
     fun `Test a for string loop`(){
