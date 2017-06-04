@@ -7,10 +7,10 @@ import sun.net.www.content.text.Generic
  * Created by saramakm on 02/06/2017.
  */
 class Generics {
-    @Test
+    @Test(expected = NotImplementedError::class)
     fun `test generic repo implementation`() {
         val customRepository = GenericRepo<Customer>();
         val result = customRepository.getCusById(1);
-        assert(result=="Ba", {result})
+        assert(result.toString()=="", {result})
     }
 }
