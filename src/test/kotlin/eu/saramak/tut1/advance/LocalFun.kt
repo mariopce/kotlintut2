@@ -14,11 +14,11 @@ class LocalFun : DescribeTest {
         whenn("local fun is call")
         val result = wrapperForLocalFun("Mario")
         then("access to all members, no access to localFun")
-        result == "Mario Mariusz Mario Mariusz bee"
+        result == "Mario Mariusz2 Mario Mariusz2 bee"
     }
 
     fun wrapperForLocalFun(str: String) : String {
-        val name ="Mariusz"
+        val name ="Mariusz2"
         fun localFun(inside: String) : String {
             return str + name + inside;
         }
