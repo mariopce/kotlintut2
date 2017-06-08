@@ -18,6 +18,10 @@ data class CustomerKotlin(var id: Int, var name:String, var email: String){
 
 }
 
+fun CustomerKotlin.extension(){
+    println("extension")
+}
+
 enum class Status {
     Current,
     Pass

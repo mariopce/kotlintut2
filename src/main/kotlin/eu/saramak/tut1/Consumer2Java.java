@@ -69,10 +69,12 @@ public class Consumer2Java {
     public static void main(String[] args) {
         String name = "";
         CustomerKotlin kotlin = new CustomerKotlin(1, name,"m@m.pl");
+        CustomerKotlinKt.extension(kotlin);
         kotlin.someProperty = "var is not final";
         Status status = kotlin.change();
 
-        String ss = TopLevelFunKt.prefix("1", "2");
+        String ss = Utils.prefix("1", "2");
+        System.out.println(Utils.CopyrightYear);
         System.out.println(ss);
         System.out.println(status);
         System.out.println(kotlin.someProperty);
