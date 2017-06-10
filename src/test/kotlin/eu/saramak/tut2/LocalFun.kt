@@ -1,14 +1,11 @@
-package eu.saramak.tut1.advance
-
-import com.sun.tools.corba.se.idl.constExpr.Not
-import org.junit.Test
+package eu.saramak.tut2
 
 /**
  * Created by saramakm on 08/06/2017.
  */
 class LocalFun : DescribeTest {
 
-    @Test
+    @org.junit.Test
     fun `Local function should have access to parent function`() {
         given("a local fun")
         whenn("local fun is call")
@@ -28,14 +25,3 @@ class LocalFun : DescribeTest {
 
 
 
-interface DescribeTest {
-    infix fun LocalFun.given(message: String) {
-        println(message)
-    }
-    infix fun LocalFun.whenn(message: String) {
-        println(message)
-    }
-    infix fun LocalFun.then(message: String) {
-        println(message)
-    }
-}
