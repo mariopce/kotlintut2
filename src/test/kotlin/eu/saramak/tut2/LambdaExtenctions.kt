@@ -1,5 +1,7 @@
 package eu.saramak.tut2
 
+import org.junit.Test
+
 /**
  * Created by saramakm on 13/06/2017.
  */
@@ -34,7 +36,21 @@ fun main(args: Array<String>) {
             }
         }
     }
-}
-class LambdaExtenctions{
 
+}
+
+class Manager {
+    operator fun invoke(s: String) :String{
+        println(s)
+        return s;
+    }
+}
+
+class LambdaExtenctions {
+    @Test
+    fun `Invoking operator method test`(){
+        val manager = Manager();
+        manager("Do sth!!")
+        assert(manager("Do sth!!") == "Do sth!!")
+    }
 }
