@@ -1,5 +1,10 @@
 language: java
+jdk: oraclejdk8
+
+### Misc. configurations
+
 sudo: false
-after_success:
-  - bash <(curl -s https://codecov.io/bash)
+
+script:
+  - ./gradlew --info clean build check
 

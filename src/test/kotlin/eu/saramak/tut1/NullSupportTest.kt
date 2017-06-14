@@ -1,5 +1,6 @@
 package eu.saramak.tut1
 
+import org.junit.Ignore
 import org.junit.Test
 
 /**
@@ -8,6 +9,7 @@ import org.junit.Test
 
 class NullSupportTest {
 
+    /*
     @Test
     fun `Call java from kotlin`(){
         val consumerJava = KotlinConsumerFromJava();
@@ -22,8 +24,13 @@ class NullSupportTest {
             return super.getName()
         }
 
+        override fun setName(name: String?) {
+            super.setName(name)
+        }
+
         override fun getEmail(): String? {
             return super.getEmail()
         }
     }
+    */
 }
