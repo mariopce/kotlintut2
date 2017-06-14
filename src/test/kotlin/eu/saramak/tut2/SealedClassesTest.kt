@@ -6,16 +6,17 @@ import org.junit.Test
  * Created by saramakm on 14/06/2017.
  */
 
-open class Result {
-    class Success(val content: String) : Result()
-    class Error(val code: Int, val message: String) : Result()
+sealed class Result {
+
 }
+class Success(val content: String) : Result()
+class Error(val code: Int, val message: String) : Result()
 
 fun getPageByUrl(url: String): Result {
     if (url == "/") {
-        return Result.Success("My page");
+        return Success("My page");
     } else {
-        return Result.Error(404, "Not found")
+        return Error(404, "Not found")
     }
 }
 
@@ -27,11 +28,11 @@ class SealedClassesTest {
         val result = getPageByUrl("/index.html");
         var mess = ""
         when (result) {
-            is Result.Success -> {
+            is Success -> {
                 println(result.content)
                 mess = result.content;
             }
-            is Result.Error -> {
+            is Error -> {
                 println("${result.code} : " + result.message)
                 mess = result.message
             }
