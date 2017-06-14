@@ -2,3 +2,4 @@
 
 This is tutorial based on https://www.safaribooksonline.com/library/view/advanced-kotlin-programming/ 
 
+image:https://travis-ci.org/mariopce/kotlintut2.svg?branch=master["Build Status", link="https://travis-ci.org/mariopce/kotlintut2"]
